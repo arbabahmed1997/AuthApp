@@ -107,10 +107,10 @@ npm run android
 ### How Authentication Works
 
 - **User storage**
-  - All registered users are stored in AsyncStorage under the `@auth_app_users` key.
+  - All registered users are stored in AsyncStorage under the `@app_users` key.
   - Passwords are kept in plain text **only for this assessment** (no backend). In a real app, passwords must be hashed and never stored in plain text.
 - **Current user**
-  - The currently authenticated user (without password) is stored under `@auth_app_current_user`.
+  - The currently authenticated user (without password) is stored under `@app_current_user`.
   - On app startup, `AuthProvider` reads this key and restores the session if present.
 - **Signup flow**
   - Validates name, email format, and password length (min from `validationRules`).
